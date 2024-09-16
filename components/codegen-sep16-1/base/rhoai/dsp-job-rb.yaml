@@ -1,0 +1,12 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: codegen-sep16-1-dsp-job-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: codegen-sep16-1-dsp-job
+    namespace: codegen-sep16-1
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: codegen-sep16-1-dsp-job-role
